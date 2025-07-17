@@ -11,7 +11,7 @@ func SetupRouter() *gin.Engine {
     {
 		api.GET("/ping", controllers.Ping)
 		api.GET("/version", controllers.GetYTDLPVersion)
-		api.GET("/download", controllers.DownloadYoutubeFromUrl)
+		api.GET("/downloadMPD", controllers.DownloadStreamMPD)
     }
 
     return r
