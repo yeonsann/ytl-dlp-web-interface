@@ -10,7 +10,10 @@ func SetupRouter() *gin.Engine {
     api := r.Group("/api")
     {
 		api.GET("/ping", controllers.Ping)
+		api.GET("/version", controllers.GetYTDLPVersion)
+		api.GET("/download", controllers.DownloadYoutubeFromUrl)
     }
+
     return r
 }
 
